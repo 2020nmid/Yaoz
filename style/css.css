@@ -1,0 +1,67 @@
+body,ul,p,h1,form,input{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: Arial, serif;
+}
+img{
+    border: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+body{
+    background: url("../images/body_bg.jpg") repeat-x;
+}
+#top{
+    width: 960px;
+    height: 30px;
+    margin: 0 auto;
+}
+.top_menu{
+    float: left;
+}
+.top_menu li{
+    float: left;
+    font-size: 13px;
+    line-height: 30px;
+    padding-right: 18px;
+    margin-right: 15px;
+}
+.top_menu a{
+    color: #c0c0c0;
+}
+.top_menu a:hover{
+    color: white;
+}
+.top_menu .no_dot{
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+.top_bar{
+    float: right;
+}
+.top_bar li{
+    float: left;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 30px;
+}
+.top_bar .phone{
+    padding: 0 38px;
+}
+.top_bar .help{
+
+}
+.top_bar .space{
+    margin: 14px;
+}
+.top_bar .help a{
+    color: white;
+}
