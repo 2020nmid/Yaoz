@@ -73,3 +73,180 @@ body{
 .top_bar li .space{
     margin-right: 12px;
 }
+#header{
+    width: 960px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    background: url("../images/header_bg.png") no-repeat;
+}
+#shopping{
+    width: 260px;
+    height: 100px;
+    background: url("../images/shopping_bg.png") no-repeat;
+    position: relative;
+}
+#shopping p{
+    color: #f7f7f7;
+    font-size: 20px;
+    font-family: Arial, serif;
+    padding: 30px 0 0 84px;
+}
+#shopping a{
+    display: block;
+    width: 114px;
+    background: url("../images/shopping_bg.png") no-repeat
+0 -100px;
+    position: absolute;
+    top: 63px;
+    left: 104px;
+    font-size: 15px;
+    color: #ffc200;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    line-height: 23px;
+}
+#shopping a:hover{
+    color: #ffe388;
+}
+#header h1{
+    width: 238px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -119px;
+}
+#header .search{
+    top: 33px;
+    right: 0;
+}
+.search{
+    width: 292px;
+    height: 31px;
+    background: url("../images/search.png") no-repeat;
+    position: absolute;
+}
+.search .text{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 230px;
+    height: 31px;
+    background: none;
+    border: none;
+    font-size: 13px;
+    color: #666;
+    outline: none;
+}
+.search .btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 42px;
+    background: none;
+    border: none;
+    height: 31px;
+}
+#nav{
+    height: 36px;
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 8px;
+}
+#nav li{
+    float: left;
+    height: 28px;
+    margin-right: 2px;
+}
+#nav a{
+    float: left;
+    height: 28px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    line-height: 28px;
+}
+#nav a:hover,#nav .active a{
+    background: url("../images/nav_active.png") repeat-x 0 -56px;
+}
+#nav a:hover strong,#nav .active strong{
+    background: url("../images/nav_active.png") no-repeat;
+}
+#nav a:hover span,#nav .active span{
+    background: url("../images/nav_active.png") no-repeat right -28px;
+}
+#nav strong{
+    float: left;
+    height: 28px;
+
+    font-weight: normal;
+}
+#nav span{
+    float: left;
+    height: 28px;
+    padding: 0 16px;
+}
+#content{
+    width: 1000px;
+    margin: 24px auto 0;
+    background: url("../images/content_bg.png") repeat-y -1000px 0;
+}
+#content_top{
+    width: 1000px;
+    background: url("../images/content_bg.png") no-repeat;
+}
+#content_bottom{
+    width: 1000px;
+    background: url("../images/content_bg.png") no-repeat -2000px bottom;
+}
+#ad{
+    width: 940px;
+    height: 300px;
+    position: relative;
+    top: 10px;
+    margin: 0 auto;
+}
+#ad ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#ad li{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#ad h2{
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    z-index: 3;
+    width: 268px;
+    text-align: center;
+    font-size: 25px;
+    color: #ffc600;
+}
+#ad p{
+    position: absolute;
+    left: 268px;
+    bottom: 7px;
+    z-index: 3;
+    color: #fcc;
+    font-size: 13px;
+    line-height: 16px;
+    width: 630px;
+}
+#ad .bg{
+    width: 940px;
+    height: 52px;
+    background: black;
+    filter: alpha(opacity:80);
+    opacity: 0.8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
