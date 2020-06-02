@@ -28,8 +28,9 @@ body{
     float: left;
     font-size: 13px;
     line-height: 30px;
-    padding-right: 18px;
     margin-right: 15px;
+    padding-right: 18px;
+    background: url("../images/top_dot.png") no-repeat right 13px;
 }
 .top_menu a{
     color: #c0c0c0;
@@ -52,16 +53,23 @@ body{
     font-weight: bold;
     font-size: 13px;
     line-height: 30px;
-}
-.top_bar .phone{
-    padding: 0 38px;
-}
-.top_bar .help{
 
 }
-.top_bar .space{
-    margin: 14px;
+.top_bar .phone{
+    background: url("../images/telephone.png") no-repeat 15px 3px;
+    padding: 0 38px 0;
 }
+.top_bar .phone a{
+    color: white;
+}
+.top_bar .help{
+    background: url("../images/message.png") no-repeat 0;
+    padding: 0 38px 0;
+}
+
 .top_bar .help a{
     color: white;
+}
+.top_bar li .space{
+    margin-right: 12px;
 }
