@@ -282,6 +282,7 @@ body{
     color: white;
     line-height: 28px;
     text-align: center;
+    margin-top: 0;
     margin-bottom: 1px;
 }
 .module_menu h2 strong{
@@ -386,4 +387,145 @@ body{
     height: 45px;
     padding-top: 5px;
     line-height: 18px;
+}
+#payment{
+    padding-left: 18px;
+    padding-top: 33px;
+    margin: 0 auto;
+}
+.sort{
+    height: 20px;
+}
+.sort dl{
+    float: left;
+    margin: 0;
+}
+.sort dt{
+    float: left;
+    color: #747474;
+    font-weight: bold;
+    font-size: 12px;
+    padding-right: 2px;
+
+}
+.sort dd{
+    float: left;
+    position: relative;
+    width: 109px;
+    height: 19px;
+    margin-right: 12px;
+    margin-left: 0;
+}
+.sort h2{
+    float: left;
+    width: 108px;
+    height: 17px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    color: #747474;
+    font-weight: normal;
+    text-indent: 5px;
+    margin: 0;
+}
+.sort ul{
+    width: 108px;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 19px;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+.sort li{
+    font-size: 12px;
+    line-height: 20px;
+    text-indent: 5px;
+    cursor: pointer;
+}
+.sort .active{
+    background: #099;
+    color: #fff;
+}
+.sort p{
+    font-size: 12px;
+    float: right;
+    color: #747474;
+}
+.sort p strong{
+    color: #999;
+}
+.sort p span{
+    padding: 0 5px;
+}
+.sort a{
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    top: 0;
+    left: 90px;
+    background: url("../images/shopping_bg.png") 0 -376px;
+    z-index: 2;
+}
+.sort a:hover{
+    background: url("../images/shopping_bg.png") -19px -376px;
+}
+.color_style{
+    color: #b20e00;
+}
+.pic_list{
+    width: 706px;
+    overflow: hidden;
+}
+.pic_list h2{
+    height: 58px;
+    line-height: 58px;
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+.pic_list ul{
+    width: 736px;
+}
+.pic_list li{
+    float: left;
+    width: 184px;
+    height: 200px;
+}
+.pic_list a{
+    display: block;
+    width: 154px;
+    height: 114px;
+    border: 1px solid #c6c6c6;
+}
+.pic_list a:hover{
+    border: 1px solid #434343;
+}
+.pic_list h3{
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+.pic_list p{
+
+}
+.pic_list span{
+
+}
+.page{
+    text-align: center;
+    border-bottom: 1px solid #cdcdc8;
+    padding-bottom: 5px;
+}
+.page a{
+    height: 20px;
+    display: inline-block;
+    padding: 0 6px;
+    color: #b20e00;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: 宋体, serif;
+}
+.page a:hover, .page .active{
+    color: #fff;
+    background: #b20e00;
 }
