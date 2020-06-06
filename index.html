@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>HomePage</title>
     <link href="style/css.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 <div id="top">
@@ -31,7 +32,7 @@
     <h1 title="ECOMMERCE WEBSITE"><a href="#"><img src="images/logo.png" alt="Logo"/></a></h1>
     <div class="search">
         <form action="">
-            <input class="text" type="text" value="Search website"/>
+            <input id="text1" class="text" type="text" value="Search website"/>
             <input class="btn" type="submit" value="">
         </form>
     </div>
@@ -53,7 +54,8 @@
         <div id="content_bottom">
             <div id="ad">
                 <ul>
-                    <li><a href="#"><img src="images/banner/1.png" alt=""/></a></li>
+                    <li><a><img src="images/banner/1.png" alt=""/></a></li>
+                    <li><a><img src="images/banner/1.png" alt=""/></a></li>
                 </ul>
                 <h2>PRODUCT TITLE</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -107,14 +109,14 @@
                     </div>
                 </div>
                 <div id="wrap">
-                    <div class="sort">
+                    <div id="sel1" class="sort">
                         <dl>
                             <dt>Sort by:</dt>
                             <dd>
                                 <h2>Ascending</h2>
                                 <a href="javascript:;"></a>
                                 <ul>
-                                    <li class="active">menu1</li>
+                                    <li>menu1</li>
                                     <li>menu2</li>
                                     <li>menu3</li>
                                 </ul>
@@ -221,10 +223,10 @@
                         <h2>FEATURED PRODUCTS</h2>
                         <div class="scroll_wrap">
                             <div class="scroll_wrap_l">
-                                <div class="scoll_wrap_r">
-                                    <a class="prev" href="javascript:;"></a>
-                                    <a class="next" href="javascript:;"></a>
-                                    <div class="list_wrap">
+                                <div id="run1" class="scoll_wrap_r">
+                                    <a class="prev"></a>
+                                    <a class="next"></a>
+                                    <div style="width: 615px;overflow: hidden" class="list_wrap">
                                         <ul>
                                             <li>
                                                 <a href="#"><img src="images/scroll_pic/1.png" alt=""/></a>
@@ -263,7 +265,7 @@
             </div>
             <div class="search2">
                 <form action="">
-                    <input class="text" type="text" value="Search website"/>
+                    <input id="text2" class="text" type="text" value="Search website"/>
                     <input class="btn" type="submit" value=""/>
                 </form>
             </div>

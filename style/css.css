@@ -437,6 +437,7 @@ body{
     left: 0;
     z-index: 1;
     display: none;
+    background: white;
 }
 .sort li{
     font-size: 12px;
@@ -562,9 +563,12 @@ body{
     padding-top: 34px;
     width: 615px;
     margin: 0 auto;
+
 }
 .list_wrap ul{
     height: 150px;
+    left: 0;
+    position: relative;
 }
 .list_wrap li{
     width: 205px;
