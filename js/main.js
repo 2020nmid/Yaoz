@@ -2,9 +2,10 @@ window.onload = function(){
     mv.app.toTip();
     mv.app.toSel();
     mv.app.toRun();
+    mv.app.changepic();
 };
 
-var mv = {};
+let mv = {};
 mv.ui = {};
 mv.tools = {};
 mv.tools.getByClass = function(oParent,sClass){
@@ -29,53 +30,9 @@ mv.ui.textChange = function (obj,str) {
         }
     };
 };
-mv.ui.moveLeft = function(obj,old,now){
-    clearInterval(obj.timer);
-    obj.timer = setInterval(function () {
-        let iSpeed = (now - old)/20;
-        iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
-        if (now === old){
-            clearInterval(obj.timer);
-        }
-        else{
-            old +=iSpeed;
-            obj.style.left = old + 'px';
-        }
-    })
-}
+
 
 mv.app = {};
-
-// mv.ui.fadeIn = function(obj){
-//     let value = 0;
-//     clearInterval(obj.timer);
-//     obj.timer = setInterval(function () {
-//         let iSpeed = 5;
-//         if(value === 100){
-//             clearInterval(obj.timer);
-//         }
-//         else {
-//             value += iSpeed;
-//             obj.style.opacity = value/100;
-//             obj.style.filter = 'alpha(opacity='+value+')';
-//         }
-//     },30);
-// }
-// mv.ui.fadeOut = function(obj){
-//     let value = 100;
-//     clearInterval(obj.timer);
-//     obj.timer = setInterval(function () {
-//         let iSpeed = -5;
-//         if(value === 0){
-//             clearInterval(obj.timer);
-//         }
-//         else{
-//             value += iSpeed;
-//             obj.style.opacity = value/100;
-//             obj.style.filter = 'alpha(opacity='+value+')';
-//         }
-//     },30)
-// }
 
 mv.app.toTip = function () {
     let oText1 = document.getElementById('text1');
@@ -84,25 +41,7 @@ mv.app.toTip = function () {
     mv.ui.textChange(oText1,'Search website');
     mv.ui.textChange(oText2,'Search website');
 };
-// mv.app.toBanner = function () {
-//     let oDd = document.getElementById('ad');
-//     let iNow = 0;
-//     let aLi = oDd.getElementsByTagName('li');
-//     let timer = setInterval(auto,3000);
-//     function auto() {
-//         if (iNow === aLi.length-1){
-//             iNow = 0;
-//         }
-//         else {
-//             iNow++;
-//         }
-//         for (let i=0;i<aLi.length;i++){
-//             mv.ui.fadeOut(aLi[i]);
-//         }
-//         mv.ui.fadeIn(aLi(iNow));
-//
-//     }
-// };
+
 mv.app.toSel = function () {
     let oSel = document.getElementById('sel1');
     let aDd = oSel.getElementsByTagName('dd');
@@ -146,28 +85,69 @@ mv.app.toSel = function () {
     }
 };
 mv.app.toRun = function () {
-    const oRun = document.getElementById('run1');
-    const oUl = oRun.getElementsByTagName('ul')[0];
-    const aLi = oUl.getElementsByTagName('li');
-    const oPrev = mv.tools.getByClass(oRun,'prev')[0];
-    const oNext = mv.tools.getByClass(oRun,'next')[0];
-    let iNow = 0;
-    oUl.innerHTML += oUl.innerHTML;
-    oUl.style.width = aLi.length * aLi[0].offsetWidth + 'px';
-    oPrev.onclick = function () {
-        if(iNow === 0){
-            iNow = aLi.length/2;
-            oUl.style.left = -oUl.offsetWidth/2 + 'px';
+    const prev = document.getElementsByClassName('prev');
+    const next = document.getElementsByClassName('next');
+    const move = document.getElementById('move');
+
+    toright= next[0].onclick = function () {
+        if (parseInt(move.style.left) ===-1230) {
+            move.style.left = '-615px';
         }
-        mv.ui.moveLeft(oUl,iNow*aLi[0].offsetWidth,-(iNow-1)*aLi[0].offsetWidth);
-        iNow++;
-    };
-    oNext.onclick = function () {
-        if(iNow === aLi.length/2){
-            iNow = 0;
-            oUl.style.left = 0 + 'px';
+        move.style.left = parseInt(move.style.left) - 5 + 'px';
+        if(parseInt(move.style.left)%205!==0){
+            let movement = setTimeout("toright()", 20);
         }
-        mv.ui.moveLeft(oUl,iNow*(aLi[0].offsetWidth),-(iNow+1)*aLi[0].offsetWidth);
-        iNow++;
-    };
+    }
+    toleft = prev[0].onclick = function () {
+        if (parseInt(move.style.left)===0) {
+            move.style.left = '-615px';
+        }
+        move.style.left = parseInt(move.style.left) + 5 + 'px';
+        if(parseInt(move.style.left)%205!==0){
+            let movement = setTimeout("toleft()", 20);
+        }
+    }
 };
+
+//轮播图
+mv.app.changepic = function () {
+    const pic1 = document.getElementById("changepic0");
+    const pic2 = document.getElementById("changepic1");
+    const gonext = document.getElementById("gonext");
+    const goprev = document.getElementById('goprev');
+    const show1 = document.getElementById('showleft');
+    const show2 = document.getElementById('showright');
+    show1.onmouseover = goprev.onmouseover = function(){
+        goprev.style.display='block';
+    }
+    show2.onmouseover = gonext.onmouseover = function(){
+        gonext.style.display='block';
+    }
+    show1.onmouseout = function(){
+        goprev.style.display='none';
+    }
+    show2.onmouseout = function(){
+        gonext.style.display='none';
+    }
+    gonext.addEventListener('click',function () {
+        if (pic1.className==='changepic ch'){
+            pic1.className = 'changepic';
+            pic2.className = 'changepic ch';
+        }
+        else{
+            pic1.className = 'changepic ch';
+            pic2.className = 'changepic';
+        }
+    })
+    goprev.addEventListener('click',function () {
+        if (pic1.className==='changepic ch'){
+            pic1.className = 'changepic';
+            pic2.className = 'changepic ch';
+        }
+        else{
+            pic1.className = 'changepic ch';
+            pic2.className = 'changepic';
+        }
+    })
+}
+

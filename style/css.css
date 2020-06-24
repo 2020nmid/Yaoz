@@ -701,6 +701,45 @@ body{
 .line5 span{
     color: #ffcc00;
 }
+.gobtn{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 120px;
+    z-index: 100;
+    background: url("../images/arrow.jpg");
+    display: none;
+    background-size: cover;
+}
+.changepic{
+    opacity: 1;
+    transition: 1s;
+    transition-timing-function:linear;
+}
+.changepic.ch{
+    opacity: 0;
+}
+#goprev{
+    left: -20px;
+    transform: rotate(180deg);
+}
+
+#gonext{
+    right: -20px;
+}
+#showleft,#showright{
+    position: absolute;
+    width: 470px;
+    top: 0;
+    height: 300px;
+    z-index: 99;
+}
+#showright{
+    right: 0;
+}
+#showleft{
+    left: 0;
+}
 .special{
     padding-bottom: 30px;
 }
