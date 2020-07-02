@@ -1,0 +1,171 @@
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    position: relative;
+}
+#header{
+    z-index: 1;
+    width: 1520px;
+    height: 56px;
+    position: relative;
+}
+#mini-header{
+    padding: 10px 24px;
+    line-height: 36px;
+    margin: 0 auto;
+    justify-content: space-between;
+    float: left;
+    width: 1472px;
+    height: 36px;
+}
+#nav-link{
+    padding-left: 0;
+    width: 578px;
+    display: inline-block;
+}
+#nav-link-ul{
+    margin: 0;
+    padding: 0;
+    height: 36px;
+    width: 578px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 14px;
+    
+}
+#nav-link-ul li{
+    margin-right: 12px;
+}
+#nav-search{
+    margin-left: 56px;
+    font-size: 14px;
+    line-height: 34px;
+    color: #999;
+    width: 500px;
+    height: 36px;
+    border-radius: 2px;
+    display: inline-block;
+}
+#nav-searchform{
+    position: relative;
+    background: #F4F4F4;
+    border: 1px solid #E7E7E7;
+    padding-left: 16px;
+    height: 34px;
+    top: -10px;
+    width: 500px;
+}
+.nav-search-keyword{
+    padding: 0;
+    width: 452px;
+    height: 34px;
+    border: none;
+    background-color: transparent;
+    color: #999;
+    line-height: 36px;
+    font-size: 14px;
+}
+#nav-search-btn{
+    position: absolute;
+
+    float: right;
+    background: #E7E7E7;
+    width: 48px;
+    height: 36px;
+    cursor: pointer;
+    border-radius: 2px;
+    top: 0;
+    right: 0;
+}
+#nav-search-submit{
+    border: none;
+    width: 19px;
+    height: 19px;
+    padding-top: 6px;
+    margin-left: 16px;
+    background: url("../images/放大镜.png") no-repeat;
+}
+#nav-user-center{
+    width: 218px;
+    height: 36px;
+    float: right;
+}
+#nav-user-center .login .register{
+
+    height: 32px;
+    line-height: 36px;
+}
+.register{
+    font-size: 14px;
+    float: left;
+    margin-left: 10px;
+}
+.logout-face{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    border: 1px solid #C0C0C0;
+}
+.login{
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+    float: left;
+    font-size: 14px;
+}
+.logo{
+    width: 70px;
+    height: 30px;
+}
+.mini-upload{
+    margin-left: 0;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+    display: block;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: #FB7299;
+    float: right;
+}
+#login-tip{
+    margin: 24px auto 0;
+    width: 980px;
+    font-size: 12px;
+    color: #99a2aa;
+    text-align: center;
+    line-height: 16px;
+}
+#login-tip a{
+    width: 48px;
+    height: 16px;
+    text-decoration: none;
+    color: #00a1d6;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+#top-banner{
+    height: 86px;
+    text-align: center;
+    background: #00a0d8;
+    margin-bottom: 20px;
+}
+#title-line{
+    margin: 0 auto;
+    width: 980px;
+    height: 28px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+#login-box{
+    width: 980px;
+    margin: 0 auto;
+}

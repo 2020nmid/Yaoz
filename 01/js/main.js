@@ -129,6 +129,17 @@ mv.app.changepic = function () {
     show2.onmouseout = function(){
         gonext.style.display='none';
     }
+
+    setInterval(function(){
+        if (pic1.className==='changepic ch'){
+            pic1.className = 'changepic';
+            pic2.className = 'changepic ch';
+        }
+        else{
+            pic1.className = 'changepic ch';
+            pic2.className = 'changepic';
+        }},3000);
+
     gonext.addEventListener('click',function () {
         if (pic1.className==='changepic ch'){
             pic1.className = 'changepic';
@@ -140,14 +151,12 @@ mv.app.changepic = function () {
         }
     })
     goprev.addEventListener('click',function () {
-        if (pic1.className==='changepic ch'){
+        if (pic1.className === 'changepic ch') {
             pic1.className = 'changepic';
             pic2.className = 'changepic ch';
-        }
-        else{
+        } else {
             pic1.className = 'changepic ch';
             pic2.className = 'changepic';
         }
     })
 }
-
