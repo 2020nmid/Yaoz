@@ -4,4 +4,5 @@
 
 settimeout只会执行一次（cleartimeout有用吗?）setinterval可以反复
 
-CSS Flex 子级的float clear vertical-align会失效
+CSS Flex 
+
