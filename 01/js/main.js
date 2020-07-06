@@ -90,22 +90,42 @@ mv.app.toRun = function () {
     const move = document.getElementById('move');
 
     toright= next[0].onclick = function () {
-        if (parseInt(move.style.left) ===-1230) {
-            move.style.left = '-615px';
+        const original_distance = parseInt(move.style.left);
+        const final_distance = original_distance + 205; //touch一次获取这两项
+        rightinner = function(){
+            let current_distance = parseInt(move.style.left);
+            let speed = (final_distance - current_distance) / 10;
+            speed = Math.ceil(speed);
+            if(parseInt(move.style.left)!==final_distance){
+                let newleft = parseInt(move.style.left) + speed
+                move.style.left =  newleft + 'px';
+                movement = setTimeout("rightinner()", 20);
+            }
+            if (parseInt(move.style.left) <= -1230 || parseInt(move.style.left)>=0 ) { //初始化
+                move.style.left = '-615px';
+                clearTimeout(movement);
+            }
         }
-        move.style.left = parseInt(move.style.left) - 5 + 'px';
-        if(parseInt(move.style.left)%205!==0){
-            let movement = setTimeout("toright()", 20);
-        }
+        rightinner();
     }
     toleft = prev[0].onclick = function () {
-        if (parseInt(move.style.left)===0) {
-            move.style.left = '-615px';
+        const original_distance = parseInt(move.style.left);
+        const final_distance = original_distance - 205; //touch一次获取这两项
+        leftinner = function(){
+            let current_distance = parseInt(move.style.left);
+            let speed = (-final_distance + current_distance) / 10;
+            speed = Math.ceil(speed);
+            if(parseInt(move.style.left)!==final_distance){
+                let newleft = parseInt(move.style.left) - speed
+                move.style.left =  newleft + 'px';
+                movement = setTimeout("leftinner()", 20);
+            }
+            if (parseInt(move.style.left) <= -1230 || parseInt(move.style.left)>=0 ) { //初始化
+                move.style.left = '-615px';
+                clearTimeout(movement);
+            }
         }
-        move.style.left = parseInt(move.style.left) + 5 + 'px';
-        if(parseInt(move.style.left)%205!==0){
-            let movement = setTimeout("toleft()", 20);
-        }
+        leftinner();
     }
 };
 
@@ -159,4 +179,4 @@ mv.app.changepic = function () {
             pic2.className = 'changepic';
         }
     })
-}
+};
