@@ -713,7 +713,7 @@ body{
 }
 .changepic{
     opacity: 1;
-    transition: 1s;
+    transition: 0.5s;
     transition-timing-function:linear;
 }
 .changepic.ch{

@@ -43,9 +43,7 @@ toleft = prev[0].onclick = function () {
 
 ## CSS
 
-盒模型
-
-![](../boxmodel.png)
+盒模型 content-padding-border-margin
 
 父级position若不是默认的static，子级的position设为absolute时不相对于body
 
@@ -64,7 +62,7 @@ span之间的回车会被认为是空格
 
 使用flex的元素称为flex container，子元素为flex item
 
-![flex](../flex.png)
+![](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071004.png)
 
 参考链接：http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
 
