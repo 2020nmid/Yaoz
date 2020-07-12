@@ -1,0 +1,25 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1594288418842'); /* IE9 */
+  src: url('iconfont.eot?t=1594288418842#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQYAAsAAAAACRwAAAPKAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqFcIUAATYCJAMMCwgABCAFhG0HSxvbBxHVm1nJfiTGMSmrYpZX0US7mSAgPGs2u0Hxdzn4ASP3ptu+gABYnVo4RXzYAPXB0j1+afqc1M2V693/OWa8KIvS/GsbSDTgSKOaunE4wPGABhZ90UBHJ3pN9w5Qj/mGsYvLeBwCcJOYjIiSpSvWxEKh7ROA6NiuTTOsWAhVQhJYXiPnUn2NmIyOpY3RzgOT3LcXr8kuLNDQJdqTqrYu1ZKiz7Y/Tyad/w4N5TCc/hIAcxVIICOgQDTOTdVF+tWMSNySS5V3GigEWl+F//9dk+ww9H94oCFAGGguL8KkDWjslNmUQIPnySx7bT653QYQATwBUQ5jwm+ShEYr5da9bpfXG2F6LzogeNyeAxswnPX7d7uDxu49uFGY8ZsO7aupgvW2HtwDxu2KmOELzznXX6dWmdora84KpPLdjCm5Pby2v0U2Yg6+9tKeVCs8S0WKImKtWu5bL7xV33c3Uapxufz3Ymdeb7j1Uc2Z/tr+QFz4M5eddbOeE6gTCDStPcOXavr1/r2rieyM79rSIcrBikoYZeFEwT8vWbe13ddOeLQ231q6aIXMXdkK2CNizuaO7Fc2cfjSYfZCX5nnxRrY/gTFkpYqVDO0Wzpf8rXVP5rHkgltaNpjevUKFcLl4stFDS2n6Wtys1hD/YwqyyIO5La7pkvW6M7hdE9yidjFccUjvqbRg7+39gyZXihtw3hbDzurx6sucr062jdHiqRVA+kfaH3oFNY94lCveoWiNx8em6PcxiEN84TWnA0nQ8iIdHuJYUun6T8tzUjvS0bIuw1RHvWA+qTxja7F4kDupE0JMq3A5tjqkV9TG/5o4x1M09aHE9M9EKSOYT2o9QtFnXMa0hSA/47sLh03b/2Ww36c3+Hd5A+JmgQX/Gp5FAC3M7mTQ0u9XrDQoLb5N2mzfgO2VbbCsFSiMd/FNiTHCX0JAdx6Af6j5UK5194X8SrqAouIEDRMEoHEIiVCYTKCjoecYGBRBNxkoMzVHsLojkQoF5CeEQAENptAI4hDILG5gFCYu6ATyVswsIUEN7VF2C09pLYFqQPjIDjD+AOaUjRGVJQ3eEX78gNHrS7zibxRAZqyTjYuGJH7OLG9bStiwHAKcAZPQ+8TZE4rTlIuIrmrKpP3TOWUQqE4MA6CMzD+AJpSNPZ8UanXv6J9+YFLpkrST+SNlgcaSuoaiIsr1po6l9Xb27aIGLzLcArAGSbQ69UE5PxNK05SsrQo544KzTJ1XeX4nnB9FwA32qQUmpBCsd/1I3qmaOch6S8N/8EUzXk3kqdgUQAAAA==') format('woff2'),
+  url('iconfont.woff?t=1594288418842') format('woff'),
+  url('iconfont.ttf?t=1594288418842') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1594288418842#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon_dingdao_xiazaiapp:before {
+  content: "\e721";
+}
+
+.icon-bilibili:before {
+  content: "\e6b4";
+}
+
