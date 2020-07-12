@@ -1,0 +1,58 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2306764",
+      "name": "BILIBILI_LOGO",
+      "font_class": "bilibili",
+      "unicode": "e6b4",
+      "unicode_decimal": 59060
+    },
+    {
+      "icon_id": "2747585",
+      "name": "qq",
+      "font_class": "qq",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "7879002",
+      "name": "微博",
+      "font_class": "weibo1-copy",
+      "unicode": "e503",
+      "unicode_decimal": 58627
+    },
+    {
+      "icon_id": "10172000",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e6f4",
+      "unicode_decimal": 59124
+    },
+    {
+      "icon_id": "10241359",
+      "name": "箭头 向下",
+      "font_class": "arrow-down",
+      "unicode": "e52a",
+      "unicode_decimal": 58666
+    },
+    {
+      "icon_id": "13714046",
+      "name": "Ionicons md phone portrait",
+      "font_class": "Ioniconsmdphoneportrait",
+      "unicode": "ee1f",
+      "unicode_decimal": 60959
+    },
+    {
+      "icon_id": "14137850",
+      "name": "bilibili",
+      "font_class": "bilibili1",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    }
+  ]
+}
