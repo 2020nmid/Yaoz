@@ -2,6 +2,8 @@
 
 ## JS
 
+现代 JavaScript 教程：zh.javascript.info
+
 设计一个JS非线性动画（水平移动、先快后慢）：
 
 ```javascript
