@@ -12,7 +12,7 @@
 
 点击刷新之后会更新array，更新块的位置、及其内容，恢复其初始颜色。
 
-<img src="images/show.png" style="zoom:70%;" />
+![UsQwXF.png](https://s1.ax1x.com/2020/07/17/UsQwXF.png)
 
 确定之后块1之后需确保其与块2不重叠，即把块2的left设置在**[0,left_first-50]∪[left_first+50,210]**即可，top随机。
 
