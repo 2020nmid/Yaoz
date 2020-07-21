@@ -1,3 +1,4 @@
+//密码111111
 function getCode() {
     let email = document.getElementById("registeremail").value;
     console.log(email);
