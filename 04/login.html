@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style>
+        #loginsubmit{
+            text-decoration: none;
+            background-color: #00a1d6;
+            color: white
+        }
+        #getcode{
+            background-color: #539ffe;
+            text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<form name="formregister" method="post">
+    注册：<br/>
+    <label for="registeremail">
+        <input name="registeremail" type="email" id="registeremail" placeholder="邮箱"/>
+    </label>
+    <a id="getcode" onclick="getCode()">点我获取验证码</a><br/>
+    <label>
+        <input name="code" readonly type="text" id="code" placeholder="验证码">
+    </label><a id="tip"></a>
+    <label for="registerpassword">
+        <input name="registerpassword" type="password" id="registerpassword" placeholder="密码"/>
+    </label><br/>
+    <a onclick="register()" style="background-color: red; color: white">点我注册</a>
+</form>
+
+<form name="formlogin" method="post">
+    登录：<br/>
+    <label for="email">
+        <input name="email" id="email" type="email" placeholder="邮箱"/>
+    </label><br/>
+    <label for="password">
+        <input name="password" id="password" type="password" placeholder="密码"/>
+    </label><br/>
+    <a onclick="loginAjax()" id="loginsubmit">点我登录</a><a href="updatepasswd.html">修改密码</a>
+</form>
+<script type="text/javascript" src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改密码</title>
+    <style>
+        a:hover{
+            cursor: pointer;
+        }
+        #getcode{
+            background-color: #539ffe;
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<form name="formregister" method="post">
+    <label for="registeremail">
+        <input name="registeremail" type="email" id="registeremail" placeholder="邮箱"/>
+    </label>
+    <a id="getcode" onclick="getCode()">点我获取验证码</a><br/>
+    <label>
+        <input name="code" readonly type="text" id="code" placeholder="验证码">
+    </label><a id="tip"></a><br/>
+    <label for="registerpassword">
+        <input name="registerpassword" type="password" id="registerpassword" placeholder="新的密码"/>
+    </label><br/>
+
+    <a onclick="updatePwd()" style="background-color: red; color: white">确认更改密码</a><a href="login.html">返回登录</a>
+    <script type="text/javascript" src="login.js"></script>
+</form>
+</body>
+</html>
