@@ -25,20 +25,21 @@ function register() {
     let checkcode = document.getElementById("code").value;
     let email = document.getElementById("registeremail").value;
     let password = document.getElementById("registerpassword").value;
-    let rigister_info = {
+    let register_info = {
         "checkCode": checkcode,
-        "emai": email,
+        "email": email,
         "password": password
     }
+    console.log(register_info);
     let xhr = new XMLHttpRequest();
     xhr.open("POST","http://120.24.93.68:8085/api/user/register",true);
     xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify(rigister_info));
+    xhr.send(JSON.stringify(register_info));
     xhr.onload = function () {
         if (xhr.status !== 200) {
             alert(`Error ${xhr.status}: ${xhr.statusText}`);
         }else{
-            alert("注册成功");
+            alert(xhr.response);
         }
     }
 }
@@ -48,7 +49,7 @@ function updatePwd() {
     let password = document.getElementById("registerpassword").value;
     let update_info = {
         "checkCode": checkcode,
-        "emai": email,
+        "email": email,
         "password": password
     }
     let xhr = new XMLHttpRequest();
@@ -60,7 +61,7 @@ function updatePwd() {
             alert(`Error ${xhr.status}`+xhr.response);
             console.log(xhr.response)
         }else{
-            alert("更改密码成功");
+            alert(JSON.parse(xhr.response).message);
         }
     }
 }
@@ -72,6 +73,7 @@ function loginAjax() {
         "email":email,
         "password":password
     };
+    console.log(info);
     let xhr = new XMLHttpRequest();
     xhr.open("POST","http://120.24.93.68:8085/api/login",true);
     xhr.setRequestHeader('Content-Type', 'application/json');
@@ -79,12 +81,16 @@ function loginAjax() {
     xhr.onload = function() {
         if (xhr.status !== 200) { // 分析响应的 HTTP 状态
             alert(`Error ${xhr.status}: ${xhr.statusText}`); // 例如 404: Not Found
+            password_self.value = "";
         } else { // 显示结果
             let message = JSON.parse(xhr.response);
+           // alert(message.message);
             alert(message.message);
-            console.log(message.message);
-            password_self.value = "";
-            window.location.href = "index.html";
+
+            if (message.message==="成功") {
+                window.location.href = "index.html";
+            }
+
         }
     };
 }
