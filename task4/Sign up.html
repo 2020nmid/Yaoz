@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sgin up</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        body {
+            background-color: #f5dfec;
+        }
+        form {
+            width: 300px;
+            height: 400px;
+            margin: 45px auto;
+            border-radius: 8px;
+            background-color: #b89ddb;
+        }
+        h1 {
+            padding: 20px;
+            text-align: center;
+            font-size: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        a {
+            text-decoration: none;
+            color:#9575cd;
+        }
+        .space {
+            width: 100%;
+            height: 35px;
+            margin-left: 15px;
+            line-height: 35px;
+            font-size: 15px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }
+        input {
+            width: 90%;
+            height: 35px;
+            margin-left: 15px;
+            border: none;
+            border-bottom: 1px solid #7e57c2;
+            background-color: #d1c4e9;
+            border-radius: 3px;
+        }
+        .buttoncode {
+            width: 115px;
+            height: 35px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 17px;
+            border-radius: 3px;
+            border: none;
+            background-color: #d1c4e9;
+        }
+        .buttonall {
+            width: 130px;
+            height: 35px;
+            margin-top: 15px;
+            margin-left: 80px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 17px;
+            border-radius: 3px;
+            border: none;
+            background-color: #d1c4e9;
+        }
+        .space-box {
+            margin: 20px 15px ;  
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .code {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post" enctype="application/x-www-form-urlencoded">
+        <h1>Sign up </h1>
+        <div class="space">email</div>
+        <div class="txt-box">
+            <input type="text" class="email" name="fi">
+        </div>
+        <div class="space">Password</div>
+        <div class="txt-box">
+            <input type="password" class="password" name="fi">
+        </div>
+        <div class="space"></div>
+        <div class="txt-box">
+            <input type="text" class="code"  name="fi">
+            <button class="buttoncode" >Get Code</button>
+        </div>
+            <button class="buttonall">Sign up</button>     
+        <div class="space-box">
+            Have account?<a href="login.html">Login</a> 
+        </div>
+    </form>
+    
+    <script>
+        //获取对象
+         var email = document.querySelector(".email");
+         var password = document.querySelector(".password");
+         var code = document.querySelector(".code");
+         var submit = document.querySelector(".buttonall");
+         var getcode = document.querySelector(".buttoncode");
+
+         var mail;
+        
+         //获取验证码
+         //1.单击响应函数
+         getcode.onclick = function (){
+             mail= email.value;
+            //3.异步对象
+            var request= new XMLHttpRequest();
+            request.open("GET","http://120.24.93.68:8085/api/register/sendCheckCode?email="+mail,true);
+            request.send();
+            request.onreadystatechange = function(){
+                if(request.readyState==4){
+                    if(request.status==200){
+                        //2.是否填写邮箱
+                        if(mail){
+                            alert("请查看验证码");
+                        }else{
+                        alert("请输入邮箱");
+                        }      
+                    }
+                }
+            }    
+            return false;
+         }
+         //提交注册信息
+         submit.onclick = function(){
+             mail= email.value;
+             var mypassword =password.value;
+             var checkCode = code.value;
+             var para = {"checkCode":checkCode,"email":mail , "password": mypassword,"role": 0};
+             para = JSON.stringify(para) ;
+            //异步对象
+            var xhr= new XMLHttpRequest();
+            xhr.open("POST","http://120.24.93.68:8085/api/user/register",true);
+            xhr.setRequestHeader("Content-Type","application/json;charset-UTF-8");
+            xhr.send(para);
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4){
+                    if(xhr.status==200){
+                        //成功时弹出
+                        var Obj2 =JSON.parse(xhr.responseText); 
+                        alert(Obj2.message+"，请登录");
+                        if(Obj2.message=="成功" || Obj2.message=="用户已存在" ){
+                            //页面跳转
+                            window.location.href="login.html";
+                        }
+                    }
+                }
+            }
+            return false;  
+        }
+    </script>
+</body>
+</html>

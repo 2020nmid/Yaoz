@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #f5dfec;
+        }
+        form {
+            width: 300px;
+            height: 400px;
+            margin: 45px auto;
+            border-radius: 8px;
+            background-color: #b89ddb;
+        }
+        h1 {
+            padding: 20px;
+            text-align: center;
+            font-size: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        a {
+            text-decoration: none;
+            color:#9575cd;
+        }
+        .space {
+            width: 100%;
+            height: 35px;
+            padding-left: 15px;
+            line-height: 35px;
+            font-size: 15px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }
+        input {
+            width: 90%;
+            height: 35px;
+            margin-left: 15px;
+            border: none;
+            border-bottom: 1px solid #7e57c2;
+            background-color: #d1c4e9;
+            border-radius: 3px;
+        }
+        button {
+            width: 130px;
+            height: 35px;
+            margin-left: 80px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 17px;
+            border-radius: 3px;
+            border: none;
+            background-color: #d1c4e9;
+        }
+        .space-box {
+            margin: 20px 10px ;
+            padding-left: 15px; 
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form action="login.html" method="post">
+        <h1>login</h1>
+        <div class="space">Email</div>
+        <div class="txt-box">
+            <input type="text" class="email">
+        </div>
+        <div class="space">Password</div>
+        <div class="txt-box">
+            <input type="password" class="password">
+        </div>
+        <div class="space"></div>
+        <button class="submit">login</button>
+        <div class="space-box">
+            Don't have account?<a href="Sign up.html">Sign up</a> 
+        </div>
+    </form>
+    <script>
+        //获取对象
+         var email = document.querySelector(".email");
+         var password = document.querySelector(".password");
+         var submit = document.querySelector(".submit");
+
+         var mail;
+         var mypassword;
+         //点击登录
+         submit.onclick = function(){
+             //获取输入框中内容
+            mail= email.value;
+            mypassword =password.value;
+            var para = {"email":mail , "password": mypassword};
+             para = JSON.stringify(para) ;
+            //异步对象的操作....
+            var xhr= new XMLHttpRequest();
+            xhr.open("POST","http://120.24.93.68:8085/api/login",true);
+            xhr.setRequestHeader("Content-Type","application/json;charset-UTF-8");
+            xhr.send(para);
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4){
+                    if(xhr.status==200){
+                        //回调函数
+                        var Obj2 =JSON.parse(xhr.responseText); 
+                        alert("登录"+Obj2.message);
+                        if(Obj2.message=="成功" ){
+                            //页面跳转
+                            window.location.href="user.html";
+                        }
+                    }
+                }
+            }
+            return false;  
+         }
+    </script>
+</body>
+</html>
