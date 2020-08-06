@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+  }
+  html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    background: #ffc600;
+  }
+  svg {
+    fill: #fff;
+    background: rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 50%;
+    width: 100px;
+    margin-bottom: 50px;
+  }
+  .container {
+    padding: 20px;
+    max-width: 350px;
+    box-shadow: 0 0 0 10px rgba(0,0,0,0.1);
+    background: #fff;
+  }
+  .container .item-area .title {
+    text-align: center;
+    margin: 10px 0;
+    color: #aaa;
+    font-weight: 200;
+  }
+  .container .item-area .item {
+    background: #fff;
+    border-radius: 4px;
+  }
+  .container .item-area .item .item-li-default {
+    color: #46b7b9;
+  }
+  .container .item-area .item .item-li {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    color: #f95959;
+  }
+  .container .item-area .item .item-li .delete-item {
+    float: right;
+    outline: none;
+    width: 44px;
+    height: 26px;
+    border-radius: 4px;
+    color: #f05941;
+    background: #fafafa;
+  }
+  .container .item-area .item .item-li input:checked + .item-text {
+    color: #196b69;
+    text-decoration: line-through;
+  }
+  .container .input-area {
+    padding-top: 10px;
+  }
+  .container .input-area .add-text {
+    outline: 0;
+    border: 1px solid rgba(0,0,0,0.1);
+    height: 40px;
+    border-radius: 4px;
+    text-indent: 10px;
+  }
+  .container .input-area .add-button {
+    outline: 0;
+    height: 40px;
+    border-radius: 4px;
+    width: 60px;
+    padding: 4px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+  }
