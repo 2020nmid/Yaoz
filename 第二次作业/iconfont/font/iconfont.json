@@ -1,0 +1,23 @@
+{
+  "id": "1934170",
+  "name": "icobfont",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8614595",
+      "name": "icon_顶导_下载app",
+      "font_class": "icon_dingdao_xiazaiapp",
+      "unicode": "e721",
+      "unicode_decimal": 59169
+    },
+    {
+      "icon_id": "2306764",
+      "name": "BILIBILI_LOGO",
+      "font_class": "bilibili",
+      "unicode": "e6b4",
+      "unicode_decimal": 59060
+    }
+  ]
+}

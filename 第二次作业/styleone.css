@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.w {
+    width: 980px;
+    margin: 0 auto;
+}
+i {
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+}
+.header {
+    position: relative;
+    height: 56px;
+}
+.header ul li {
+    float: left;
+    margin-right: 15px;
+    list-style: none;
+    font-size: 13px;
+    line-height: 56px;
+}
+.header ul li .one:hover {
+    position: absolute;
+    bottom: 0px;
+    width: 500px;
+    height: 200px;
+    z-index: 1;
+}
+.header ul li a {
+    text-decoration: none;
+    color: black;
+}
+.header ul li a span {
+    margin-left: 25px;
+    font-size: 30px;
+    color: #00a1d6;
+}
+.header ul li a .phone {
+    font-size: 18px;
+}
+.header ul li a img {
+    height: 32px;
+    width: 32px;
+    border: 1px #c0c0c0 solid;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.header ul .bilibili-nav-search {
+    float: left;
+    width: 350px;
+    height: 36px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    background-color: #fff;
+}
+.header ul .bilibili-nav-search input {
+    width: 300px;
+    height: 36px;
+    background-color:#f4f4f4;
+    padding-left: 15px;
+    border: 1px #e7e7e7 solid;
+    color: #7c7c7c;
+}
+.header ul .bilibili-nav-search button {
+    width: 50px;
+    height: 36px;
+    margin-top: 1px;
+    background-color: #e7e7e7;
+    border: 1px #e7e7e7 solid;
+}
+.header ul .bilibili-nav-tougao a {
+    display: inline-block;
+    width: 114px;
+    height: 36px;
+    margin-top: 10px;
+    line-height: 36px;
+    text-align: center;
+    background-color: #fb7299;
+    border-radius: 2px;
+    color: #fff8fa;
+}
+.bilibili-dec {
+    width: 100%;
+    margin-top: -7px;
+}
+.bilibili-line-top {
+    position: relative;
+    height: 58px;
+}
+.bilibili-line-top .line-top {
+    height: 29px;
+    border-bottom: 1px #dddddd solid;
+}
+.bilibili-line-top .line-top-center {
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    margin-left: -57px;
+    height: 58px;
+    width: 114px;
+    line-height: 58px;
+    text-align: center;
+    font-size: 38px;
+    font-family: "PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif";
+    color: #000000;
+    background-color: #fff;
+}
+.bilibili-center {
+    height: 367px;
+}
+.bilibili-center .center-one {
+    float: left;
+    width: 490px;
+    height: 100%;
+    border-right: 1px #dddddd solid;
+}
+.bilibili-center .center-one .center-one-one {
+    height: 212px;
+    width: 100%;
+    background-color: #fff;
+}
+.bilibili-center .center-one .center-one-one .qrcode {
+    height: 100%;
+    width: 140px;
+    margin: 0 auto;
+}
+.bilibili-center .center-one .center-one-one .qrcode .qrcode-one {
+    position: relative;
+    height: 72px;
+    width: 140px;
+}
+.bilibili-center .center-one .center-one-one .qrcode .qrcode-one .tv-icon {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: url(images/tv-icon.png);
+    left: 0;
+    top: 10px;
+}
+.bilibili-center .center-one .center-one-one .qrcode .qrcode-two {
+    width: 140px;
+    height: 140px;
+    background-image: url(images/QR.png);
+}
+.bilibili-center .center-one .center-one-two {
+    height: 155px;
+    background-image: url(images/2233.png);
+}
+.bilibili-center .center-one .center-one-two .miaoshu {
+    text-align: center;
+}
+.bilibili-center .center-one .center-one-two p {
+    font-size: 18px;
+    color: #222;
+    margin-top: 20px;
+}
+.bilibili-center .center-one .center-one-two i {
+    font-size: 14px;
+}
+.bilibili-center .center-one .center-one-two i a {
+    text-decoration: none;
+    color: #00aae2;
+}
+.bilibili-center .center-two {
+    float: left;
+}
+.bilibili-center .center-two .center-two-center {
+    width: 414px;
+    height: 297px;
+    margin-top: 70px;
+    margin-left: 38px;
+}
+.bilibili-center .center-two .center-two-center .inputone span {
+    margin-right: 15px;
+}.bilibili-center .center-two .center-two-center .inputtwo input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px #dddddd solid;
+    margin: 10px 0px 20px 0px;
+    padding-left: 10px;
+}
+.bilibili-center .center-two .center-two-center .inputthere {
+    font-size: 12px;
+    color: #71719f;
+}
+.bilibili-center .center-two .center-two-center .inputthere i{
+    margin-left: 5px;
+    color: #bbbbbb;
+}
+.bilibili-center .center-two .center-two-center .inputthere i a {
+    text-decoration: none;
+    color: #00a1d6;
+}
+.bilibili-center .center-two .center-two-center .inputthere i .wu {
+    margin-left: 50px;
+}
+.bilibili-center .center-two .center-two-center .inputthere button {
+    height: 40px;
+    width: 184px;
+    font-style: 14px;
+    border-radius: 2px; 
+    margin-top: 5px;
+}
+.bilibili-center .center-two .center-two-center .inputthere .oo {
+    margin-right: 30px;
+    border: 1px #0381aa solid;
+    background-color: #00a7de;   
+    color: #fff;
+}
+.bilibili-center .center-two .center-two-center .inputthere .ot {
+    border: 1px #cccccc solid;
+    background-color: #fff;
+}
+.bilibili-center .center-two .center-two-center .inputthere .sas {
+    margin-top: 10px;
+    font-size: 14px;
+    
+}
+.bilibili-center .center-two .center-two-center .inputthere .sas a {
+    text-decoration: none;
+    color: #717171;
+    margin-right: 10px;
+}
+.state {
+    margin-top: 20px;
+     margin-bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #99a2aa;
+}
+.state a {
+   
+    text-decoration: none;
+    color: #00a1d6;
+}
+.footer {
+    height: 130px;
+    background-color: #f6f9fa;
+}
+.footer .o {
+    height: 130px;
+}
+.footer .o .zhanweizi {
+    height: 30px;
+}
+
+.footer .o .foot-head {
+    width: 100%;
+    height: 100px;
+    background-color: #f6f9fa;
+}
+.footer .o .foot-head>div {
+    float: left;
+    height: 100%;
+    width: 326px;
+    border-right: 1px #e5e9ef solid;
+}
+.footer .o .foot-head .bilibili ul {
+    float: left; 
+    margin-right:25px;
+}
+
+.footer .o .foot-head .bilibili ul li {
+    font-size: 14px;
+    list-style: none;
+    margin-bottom: 10px;
+   
+}
+.footer .o .foot-head .chuansong ul {
+    float: left;
+    margin-right: 25px;
+}
+.footer .o .foot-head .chuansong .bian {
+margin-left: 30px;
+}
+.footer .o .foot-head .chuansong ul li {
+    font-size: 14px;
+    list-style: none;
+    margin-bottom: 10px;
+}
+.footer .o .foot-head .therepic {
+    border: none;
+    font-size: 13px;
+}
+.footer .o .foot-head .therepic>div {
+    float: left;
+    margin: 10px 20px 10px 20px;
+    width: 65px;
+    height: 80px;
+    text-align: center;
+    background-color: #f6f9fa;
+}
+.footer .o .foot-head .therepic .therepic-one .appdownload {
+    height: 65px;
+    width: 60px;
+    background: url(images/icons.png) -1022px -195px;
+} 
+.footer .o .foot-head .therepic .therepic-two .snaweb {
+    height: 65px;
+    width: 60px;
+    background: url(images/icons.png) -1022px -322px;
+}
+.footer .o .foot-head .therepic .therepic-there .wechat {
+    height: 65px;
+    width: 60px;
+    background: url(images/icons.png) -1022px -65px;
+}
+.footer .o .foot-head ul li:first-child{
+    color: #99a2b6;
+}
